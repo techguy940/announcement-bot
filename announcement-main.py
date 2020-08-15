@@ -12,14 +12,14 @@ async def on_ready():
 	print('--------------')
 
 @bot.command()
-@commands.has_permission(Administrator=True)
+@commands.has_permissions(Administrator=True)
 async def announce(ctx,*,message):
 	await ctx.send(f'''@everyone''')
 	await ctx.send(message)
 
 
 @bot.command()
-@commands.has_permission(Administrator=True)
+@commands.has_permissions(Administrator=True)
 async def embed(ctx,*,message):
 	await ctx.send(f'''@everyone''')
 	embed=discord.Embed(
